@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Mijn eerste site </title>
+	<style>
+		* {
+			margin: 0px;
+			padding: 0px;
+			font-family: arial;
+			text-decoration: none;
+		}
+
+		.navbar-header {
+			background: #1abc9c;
+			color: white;
+			width: 100vw;
+			height: 10vh;
+		}
+
+		.navbar {
+			padding: 5vh
+		}
+
+		.navbarnaam {
+			color: white;
+			font-size: 15px;
+			font-weight: bold;
+			padding-left: 5vw;
+			/* background: lime; */
+		}
+
+		.nav {
+			display: inline;
+			padding-left: 25vw;
+		}
+
+
+
+		.nav {
+			display: inline;
+			padding-left: 25vw;
+		}
+
+		.navitem {
+			padding-left: 3vw;
+			color: white;
+			font-size: 12px;
+		}
+
+		#blad1 {
+			background: beige;
+			/* height: 50vw */
+			padding-bottom: 10vw;
+
+		}
+
+		#hond {
+			width: 30vw;
+			height: 29vw;
+			/* margin-left: 22vw; */
+			margin-left: 35vw;
+			transition: all 3s ease-in-out;
+		}
+
+		#kat {
+			width: 22vw;
+			height: 22vw;
+			margin-top: 3vw;
+			margin-left: 40vw;
+			position: absolute;
+			transition: all 3s ease-in-out;
+		}
+
+
+
+		h1 {
+			opacity: 0.6;
+			text-align: center
+		}
+
+		.webtxt {
+			width: 80vw;
+			margin-left: 11vw;
+			margin-top: 2vw;
+			line-height: 30px;
+			font-size: 12px;
+			/* text-decoration: underline; */
+		}
+
+		.workcont {
+			margin: 0 auto;
+			margin-top: -30px;
+			display: flex;
+			justify-content: space-around;
+		}
+
+		.workfoto {
+			width: 10vw;
+			box-shadow: 1px 1px 5px grey;
+		}
+
+		.workwrap {
+			display: inline;
+		}
+
+		.kleinefototxt {
+			font-size: 10px;
+		}
+
+		@media screen and (max-width: 592px) {
+			.nav {
+				margin-left: -20vw;
+			}
+			.navbarnaam {padding-left: 0vw;}
+			.navitem {
+			padding-left: 0vw;}
+		}
+	</style>
+</head>
+
+<body>
+
+	<div class="container">
+		<div class="navbar-header">
+
+			<div class="navbar">
+				<a class="navbarnaam" href="index.html">HTML • CSS • JS</a>
+
+				<div class="nav">
+					<a class="navitem" href="work.html">Work</a>
+					<a class="navitem" href="work.html">About</a>
+					<a class="navitem" href="work.html">Blog</a>
+					<a class="navitem" href="work.html">Contact</a>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	</div>
+
+	<div id="blad1">
+		<div class="rondefotowrapper">
+			<img id="hond" onclick="minouerbij(), setTimeout(textlater, 3000)" src="assets/max.png" alt="hond">
+			<img id="kat" onclick="katweg(), setTimeout(textlater2, 3000)" src="assets/minou.png" alt="kat"></div>
+		<h1 id="hondtxt">Hi, Ik ben Max!</h1>
+		<p class="webtxt">Dit is mijn eerste site, Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sit
+			reprehenderit
+			maiores fugit repellat repudiandae cupiditate, eveniet consequatur dolorem sunt odio vitae! Fugit dolorem
+			eos hic modi magni, culpa dolor, natus quos molestiae magnam officiis ratione, aliquam aperiam maiores
+			saepe. Minus dolores eius, earum incidunt consectetur id quis nisi unde non!<br /> <a
+				href="http://intecbrussel.be">Maar
+				ik ga alles leren bij IntecBrussel!</a></p>
+	</div>
+
+
+
+	<div class="workcont">
+		<div>
+			<a class="workwrap" href="work.html">
+				<img class="workfoto" src="assets/img/portfolio/port02.jpg" alt="" /></a>
+			<p class="kleinefototxt">RAIDERS</p>
+		</div>
+		<div>
+			<a class="workwrap" href="work.html">
+				<img class="workfoto" src="assets/img/portfolio/port01.jpg" alt="" /></a>
+			<p class="kleinefototxt">APE</p>
+		</div>
+		<div>
+			<a class="workwrap" href="work.html">
+				<img class="workfoto" src="assets/img/portfolio/port03.jpg" alt="" /></a>
+			<p class="kleinefototxt">VIKINGS</p>
+		</div>
+		<div>
+			<a class="workwrap" href="work.html">
+				<img class="workfoto" src="assets/img/portfolio/port04.jpg" alt="" /></a>
+			<p class="kleinefototxt">YODA</p>
+		</div>
+		<div>
+			<a class="workwrap" href="work.html">
+				<img class="workfoto" src="assets/img/portfolio/port05.jpg" alt="" /></a>
+			<p class="kleinefototxt">EMPERORS</p>
+		</div>
+		<div>
+			<a class="workwrap" href="work.html"><img class="workfoto" src="assets/img/portfolio/port06.jpg" alt="" /></a>
+			<p class="kleinefototxt">CHIEFS</p>
+		</div>
+
+	</div>
+
+
+	<script>
+		function minouerbij() {
+			document.getElementById("kat").style.marginLeft = "0vw";
+			document.getElementById("hond").style.marginLeft = "22vw";
+		}
+
+		function textlater() {
+			document.getElementById("hondtxt").innerHTML = "en wij zijn Max and Minou!";
+		}
+
+
+		function katweg() {
+			document.getElementById("kat").style.marginLeft = "40vw";
+			document.getElementById("hond").style.marginLeft = "35vw";
+		}
+
+		function textlater2() {
+			document.getElementById("hondtxt").innerHTML = "Minou is weg.";
+		}
+	</script>
+</body>
+
+</html>
